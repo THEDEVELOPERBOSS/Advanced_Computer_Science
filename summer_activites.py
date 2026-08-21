@@ -4,7 +4,7 @@ inside = []
 
 def add_activity():
     while True:
-        user_input = input('Type what you want to add seperated by pressing enter. Type done when finished ').strip()
+        user_input = input('Type what you want to add, seperate them by pressing enter. Type done when finished ').strip()
 
         if user_input.lower() == 'done':
             break
@@ -18,14 +18,22 @@ def out_in():
 
         if user_input == 'outdoor':
             outside.append(item)
-            break
         elif user_input == 'indoor':
             inside.append(item)
+        else:
+            print('Please enter a valid option')
+def remove():
+    while True:
+        print(activties)
+        user_input = input('What would you like to remove? ').lower().capitalize().strip()
+        
+        if user_input in activties:
+            activties.remove(user_input)
+            print(f'{user_input} was removed')
             break
         else:
-            print("Please enter a valid option")
-def remove():
-    print("What would you like to remove")
+            print('That activity is not in the list')
+
 while True:
     print('What do you want to do?')
     print(activties)
