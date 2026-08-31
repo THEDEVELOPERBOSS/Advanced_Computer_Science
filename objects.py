@@ -20,8 +20,8 @@ class Character:
         print(f"{self.name} attacked with {self.weapon}")
     # Increases level by 1 
     def level_up(self):
-        self.weapon += 1 
-        print(f"{self.name} leveled up! They are now at level {self.weapon}")
+        self.level += 1 
+        print(f"{self.name} leveled up! They are now at level {self.level}")
     # Reduces health
     def take_damage(self):
         self.health -= 10
@@ -32,6 +32,24 @@ giant = Character("Jonathan", "Giant", 90, 10, "Club")
 dragon = Character("Bill", "Dragon", 100, 55, "Fire Breath")
 wizard = Character("Merlin", "Wizard", 300, 1000, "Attack Spell")
 
-while True:
-    user_input = input("Who would you like to play as?")
-    print(warrior)
+from objects import Character
+    
+# Test 1
+test_character = Character("Frank", "Warrior", 100, 1, "Sword")
+print(f"Name: {test_character.name}")
+print(f"Type: {test_character.character_type}")
+print(f"Health: {test_character.health}")
+print(f"Level: {test_character.level}")
+print(f"Weapon: {test_character.weapon}")
+
+# Test 2
+hero = Character("Frank", "Warrior", 100, 1, "Sword")
+hero.take_damage()
+assert hero.health == 90
+
+# Test 3
+hero.level_up()
+assert hero.level == 2
+    
+# Test 4
+hero.attack()
