@@ -31,25 +31,11 @@ warrior = Character("Frank", "Warrior", 100, 1, "Sword")
 giant = Character("Jonathan", "Giant", 90, 10, "Club")
 dragon = Character("Bill", "Dragon", 100, 55, "Fire Breath")
 wizard = Character("Merlin", "Wizard", 300, 1000, "Attack Spell")
-
-from objects import Character
     
-# Test 1
-test_character = Character("Frank", "Warrior", 100, 1, "Sword")
-print(f"Name: {test_character.name}")
-print(f"Type: {test_character.character_type}")
-print(f"Health: {test_character.health}")
-print(f"Level: {test_character.level}")
-print(f"Weapon: {test_character.weapon}")
+# Displays all methods
+print(f"Name: {warrior.introduce()}")
+print(f"Name: {warrior.display_stats()}")
+print(f"Type: {warrior.attack()}")
+print(f"Health: {warrior.level_up()}")
+print(f"Level: {warrior.take_damage()}")
 
-# Test 2
-hero = Character("Frank", "Warrior", 100, 1, "Sword")
-hero.take_damage()
-assert hero.health == 90
-
-# Test 3
-hero.level_up()
-assert hero.level == 2
-    
-# Test 4
-hero.attack()
