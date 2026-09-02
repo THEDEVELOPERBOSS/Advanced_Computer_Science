@@ -23,16 +23,44 @@ def display_info(vehicle=None):
     print(f"It is a {vehicle.make} {vehicle.model} from the year {vehicle.year}. It has {vehicle.num_wheels} wheels. It can fit {vehicle.seating_capacity} people. It has a top speed of {vehicle.top_speed} mph.")
     main()
 def add_car():
-    print("Add car function")
+    input_make = input("What is the make? ").strip()
+    input_model = input("What is the model? ").strip()
+    input_year = int(input("What is the year? "))
+    input_num_wheels = int(input("How many wheels? "))
+    input_seating_capacity = int(input("How many seats? "))
+    input_top_speed = int(input("What is its top speed? "))
 
+    Vehicle(
+        input_make,
+        input_model,
+        input_year,
+        input_num_wheels,
+        input_seating_capacity,
+        input_top_speed
+    )
 
+    print(f"{input_make} {input_model} was added.")
+    main()
 def remove_car():
-    print("Remove car function")
-    
+    if not Vehicle.all_vehicles:
+        print("There are no cars to remove.")
+        main()
+        return
+
+    print("Which car would you like to remove?")
+    for number, car in enumerate(Vehicle.all_vehicles, start=1):
+        print(f"{number}. {car.make} {car.model}")
+
+    choice = int(input("Enter the car number: "))
+    removed_vehicle = Vehicle.all_vehicles.pop(choice - 1)
+    print(f"{removed_vehicle.make} {removed_vehicle.model} was removed.")
+
+    main()
 def display_all():
     for vehicle in Vehicle.all_vehicles:
         display_info(vehicle)
-
+    main()
+    
 def main():
     print("\n1. Display info about a car")
     print("2. Add a car to the inventory")
