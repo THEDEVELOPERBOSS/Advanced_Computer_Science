@@ -8,4 +8,8 @@ class Vehicle:
         self.seating_capacity = seating_capacity
         self.top_speed = top_speed
         
-class 
+class gas(Vehicle):
+    
+class EV(Vehicle):
+    
+class Hyrdrogen(Vehicle):
