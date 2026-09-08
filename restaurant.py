@@ -21,3 +21,17 @@ class MenuItem:
     def display_item(self):
         print(f"{self.name} is a {self.category}. It costs $ {self.price}")
         
+fancy_place = Restaurant("Money Disappear", )
+obj1 = MenuItem()
+obj2 = MenuItem()
+obj3 = MenuItem()
+obj4 = MenuItem()
+obj5 = MenuItem()
+obj6 = MenuItem()
+obj7 = MenuItem()
+obj8 = MenuItem()
+
+
+
+MenuItem
+
