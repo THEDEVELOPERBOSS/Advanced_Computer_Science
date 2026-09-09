@@ -1,12 +1,13 @@
 class Restaurant:
-    def __init__(self, Name, Menu)
+    def __init__(self, Name, Menu):
         self.name = Name
-        self.Menu = 
-    def display_restaurant():
-    
+        self.menu = Menu
+    def display_restaurant(self):
+        print(f"The name of this restraunt is {self.name} and they serve {self.menu_options}")
+    menu_options = []
 class Menu:
     def __init__(self, food_options):
-        
+        self.food_options = food_options
     def add_item():
         
     def display_menu():
@@ -19,5 +20,18 @@ class MenuItem:
     
     def display_item(self):
         print(f"{self.name} is a {self.category}. It costs $ {self.price}")
+        
+fancy_place = Restaurant("Money Disappear", )
+obj1 = MenuItem()
+obj2 = MenuItem()
+obj3 = MenuItem()
+obj4 = MenuItem()
+obj5 = MenuItem()
+obj6 = MenuItem()
+obj7 = MenuItem()
+obj8 = MenuItem()
 
-Menu.
+
+
+MenuItem
+
