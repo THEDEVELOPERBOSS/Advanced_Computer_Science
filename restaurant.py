@@ -1,4 +1,5 @@
-class MenuItem:
+# Declares class
+class MenuItem: 
     def __init__(self, name, price, category):
         self.name = name
         self.price = price
@@ -7,7 +8,7 @@ class MenuItem:
     def display_item(self):
         print(f"{self.name} is a {self.category}. It costs ${self.price:.2f}")
 
-
+# compose MenuItem into follwing classes
 class Menu:
     def __init__(self):
         self.food_options = []
@@ -30,7 +31,7 @@ class Restaurant:
         print(f"The name of this restaurant is {self.name}.")
         self.menu.display_menu()
 
-
+# Declares the objects using MenuItem class
 obj1 = MenuItem("Meatballs", 10.99, "Mains")
 obj2 = MenuItem("Steak", 25.00, "Mains")
 obj3 = MenuItem("Fries", 7.00, "Sides")
@@ -39,10 +40,10 @@ obj5 = MenuItem("Burger", 16.99, "Mains")
 obj6 = MenuItem("Cheesecake", 24.99, "Desserts")
 obj7 = MenuItem("Cookies", 50.00, "Desserts")
 obj8 = MenuItem("Chips", 13.99, "Sides")
-
+# assigns menu to menuitem
 menu = Menu()
-fancy_place = Restaurant("Money Disappear", menu)
-
+fancy_place = Restaurant("Money Disappear", menu) # restaurant object 
+# adds all of the menu itmes to the menu
 menu.add_item(obj1)
 menu.add_item(obj2)
 menu.add_item(obj3)
@@ -51,5 +52,5 @@ menu.add_item(obj5)
 menu.add_item(obj6)
 menu.add_item(obj7)
 menu.add_item(obj8)
-
+# displays the restaurnt 
 fancy_place.display_restaurant()
