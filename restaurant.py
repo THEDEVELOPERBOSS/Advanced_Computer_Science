@@ -1,6 +1,7 @@
 class Restaurant:
     def __init__(self, Name, Menu)
-    
+        self.name = Name
+        self.Menu = 
     def display_restaurant():
     
 class Menu:
@@ -18,3 +19,5 @@ class MenuItem:
     
     def display_item(self):
         print(f"{self.name} is a {self.category}. It costs $ {self.price}")
+
+Menu.
