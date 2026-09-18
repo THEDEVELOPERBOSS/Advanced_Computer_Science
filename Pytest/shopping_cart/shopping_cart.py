@@ -2,18 +2,19 @@ class ShoppingCart():
     def __init__(self, items):
         self.items = items
         
-        cart = ShoppingCart(["apple", "bread", "milk"])
-        print(cart.items)
         
-    def add(cart):
-        cart.append("eggs")
+    def add(self, item):
+        self.items.append(item)
         
-    def remove(cart):
-        cart.remove("apple")
-    
-    def size(cart):
-        total_items = len(cart)
-        print(f"{total_items} in the cart")
+    def remove(self, item):
+        if item in self.items:
+            self.items.remove(item)
+            return True
+        else:
+            return False
+    def size(self):
+        total_items = len(self.items)
+        return total_items
         
-    def display_items():
-        
+    def display_items(self):
+        print(self.items)
