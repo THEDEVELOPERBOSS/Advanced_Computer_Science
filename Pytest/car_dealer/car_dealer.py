@@ -1,11 +1,25 @@
-class Car():
-    def __init__(self, make, model, year):
+class Car_dealer():
+    def __init__(self, make, model, year, car_rented):
         self.make = make
-        self.model = model 
+        self.model = model
         self.year = year
-    
+        self.rented = car_rented
+
     def rent(self):
-        if car_rent in self.cars_in_inventory:
-            return("Car has been taken out succesfully")
+        if self in cars_in_inventory:
+            self.rented = True
+            return "Car has been taken out succesfully"
         else:
-            return("Car is not in inventory")
+            return "Car is not in inventory"
+
+    def return_car(self):
+        if self.rented and self not in cars_in_inventory:
+            self.rented = False
+            cars_in_inventory.append(self)
+            return "Car has been returned succesfully"
+        else:
+            return "Car is still in inventory"
+
+Ford_fiesta = Car_dealer("Ford", "Fiesta", 2005, False)
+jeep_xj = Car_dealer("Jeep", "Cheorkee", 2001, True)
+cars_in_inventory = [Ford_fiesta]
