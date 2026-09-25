@@ -20,6 +20,13 @@ class Car_dealer():
         else:
             return "Car is still in inventory"
 
+    def return_wrong_car(self):
+        if self.rented and self not in master_inventory:
+            return "This is not one of our cars. You are returning it to the wrong place"
+        else:
+            return "This is one of our cars"
+        
 Ford_fiesta = Car_dealer("Ford", "Fiesta", 2005, False)
 jeep_xj = Car_dealer("Jeep", "Cheorkee", 2001, True)
 cars_in_inventory = [Ford_fiesta]
+master_inventory = [Ford_fiesta, jeep_xj]

@@ -20,4 +20,6 @@ def test_return_car_in():
     car_rented = Car_dealer("Ford", "Fiesta", 2005, False)
     cars_in_inventory.append(car_rented)
 
-    assert car_rented.return_car() == "Car is still in inventory"
+def test_return_wrong_car():
+    car_rented = Car_dealer("Subaru", "Outback", 2010, True)
+    assert car_rented.return_wrong_car() == "This is not one of our cars. You are returning it to the wrong place"
