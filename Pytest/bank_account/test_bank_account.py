@@ -1,4 +1,4 @@
-from Pytest.bank_account.bank_account import BankAccount
+from bank_account.py import BankAccount
 
 def test_deposit():
     account = BankAccount("Alice", 200)
