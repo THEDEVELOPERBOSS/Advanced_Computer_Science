@@ -222,15 +222,21 @@ class Game:
                 self.fall_timer = 0 # resets the fall timer
             # Draw the game
             win.fill((0, 0, 0))
+            
             self.board.draw()
             self.current_piece.draw() # tells the piece to draw itself 
+            self.draw_score() # displays the player's score
             
             pygame.display.update()
 
             # Keep the game running at the correct FPS
             timer.tick(fps)
-
-        pygame.quit()
+            pygame.quit()
+    def draw_score(self):
+        # displays the current score
+        score_text = font.render(f"Score: {self.score}", True, WHITE)
+        
+        win.blit(score_text, (650, 50))
 def make_next_piece():
     next_piece = random.choice(PIECES) # get next piece randomly 
     return next_piece
