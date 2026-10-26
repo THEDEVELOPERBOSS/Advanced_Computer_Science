@@ -1,7 +1,8 @@
 def InsertionSort(myList):
     unsorted = myList[99]
-    for i in range(len(myList), ):
+    for i in range(unsorted, len(myList)):
         current = myList[i]
+        j = i - 1 
         while j > current:
             j -= 1
             myList[i] = myList[i - 1]
