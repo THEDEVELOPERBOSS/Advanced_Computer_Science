@@ -1,8 +1,11 @@
 def MergeSort(myList):
+    times = 0 
+    mid_index = len(myList) // times
+    firstHalf = myList[:mid_index]
+    secondHalf = myList[mid_index:]
     while True: 
-        mid_index = len(myList) // 2
-        firstHalf = myList[:mid_index]
-        secondHalf = myList[mid_index:]
+        times += 2 
+        # figure out how to append to myList correctly 
         for i in range(len(firstHalf) - 1):
             num_1 = firstHalf[i]
             num_2 = firstHalf[i + 1]
@@ -17,6 +20,12 @@ def MergeSort(myList):
                 secondHalf[i + 1] = num_1
         if # need to figure out what condition to put here:
             False
+        first_index = len(firstHalf) // times
+        second_index = len(secondHalf) // times
+        firstHalf = firstHalf[:first_index]
+        secondHalf = firstHalf[first_index:]
+        thirdHalf = secondHalf[:second_index]
+        fourthHalf = secondHalf[second_index:]
         
         
 
