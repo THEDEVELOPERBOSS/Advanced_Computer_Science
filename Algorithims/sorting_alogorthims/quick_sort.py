@@ -1,4 +1,3 @@
-```python
 def QuickSort(myList):
     if len(myList) <= 1:
         return myList
@@ -28,4 +27,3 @@ myList = [33,65,77,49,26,93,56,25,24,4,17,7,3,80,92,45,70,14,74,16,78,71,35,91,4
 print(f"Unsorted: {myList}")
 myList = QuickSort(myList)
 print(f"Sorted: {myList}")
-```
