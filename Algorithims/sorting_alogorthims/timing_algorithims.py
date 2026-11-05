@@ -1,3 +1,5 @@
+from time import perf_counter
+
 def SelectionSort(myList):
     for i in range(len(myList)):
         min_index = i
@@ -85,8 +87,23 @@ def QuickSort(myList):
 
 
 myList = [33,65,77,49,26,93,56,25,24,4,17,7,3,80,92,45,70,14,74,16,78,71,35,91,44,51,53,52,60,73,89,32,96,54,81,87,20,38,27,68,62,95,21,84,100,86,18,2,5,12,58,79,97,22,55,94,15,41,46,83,88,48,59,19,8,76,9,85,61,50,57,13,6,90,23,39,1,30,82,36,69,66,37,67,99,64,28,11,72,63,43,40,34,42,98,47,29,31,10,75]
+start = perf_counter()
 print(f"Selection Sort: {SelectionSort(myList)}")
+end = perf_counter()
+print(f"Selection Sort Time: {end-start}")
+start = perf_counter()
 print(f"Bubble Sort: {BubbleSort(myList)}")
+end = perf_counter()
+print(f"Bubble Sort Time: {end-start}")
+start = perf_counter()
 print(f"Insertion Sort: {InsertionSort(myList)}")
+end = perf_counter()
+print(f"Insertion Sort Time: {end-start}")
+start = perf_counter()
 print(f"Merge Sort: {MergeSort(myList)}")
+end = perf_counter()
+print(f"Merge Sort Time: {end-start}")
+start = perf_counter()
 print(f"Quick sort: {QuickSort(myList)}")
+end = perf_counter()
+print(f"Quick Sort Time: {end-start}")
