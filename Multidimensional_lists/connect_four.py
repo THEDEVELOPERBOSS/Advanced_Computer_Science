@@ -9,9 +9,12 @@ board = [
 turn = "Player One"
 game_over = False
 
+def checkWinner():
+    pass
+
 while game_over == False:
     
-    # add checks to see if someone won/draw
+    checkWinner()
     
     if game_over:
         break
@@ -52,9 +55,13 @@ while game_over == False:
         continue
     
     # Check whether board pos is occupied and adds one to column
-    if board[spot_r][spot_c] == "X" or board[spot_r][spot_c] == "O":
-        spot_c += 1
-        continue
+    for row in range(5, -1, -1):
+        if board[row][spot_c] == "":
+            spot_r = row
+            break
+        else:
+            print("Column is full!")
+            continue
     
     if turn == "Player One":
         board[spot_r][spot_c] = "X"
